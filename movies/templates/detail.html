@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+{%block content%}
+<h3>Detail of {{data.title}}</h3>
+<table class="table dark-table">
+    <thead>
+    <tr>
+        <th>Name: {{data.title}}</th>
+    </tr>
+     <tr>
+        <th>Release Year: {{data.release_date}}</th>
+    </tr>
+    <tr>
+        <th>No of stock available: {{data.number_in_stock}}</th>
+    </tr>
+      <tr>
+        <th>Genre of Movie: {{data.genre}}</th>
+    </tr>
+
+    </thead>
+
+</table>
+{%endblock%}

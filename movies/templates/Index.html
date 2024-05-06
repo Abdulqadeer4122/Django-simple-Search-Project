@@ -1,0 +1,27 @@
+{% extends 'base.html'%}
+{%block content%}
+<h3 class="text-center mt-5">List of movies </h3>
+<div class="row justify-content-center">
+<table class="table table-bordered table-striped m-3" style="width:50%">
+    <thead class="table-dark">
+    <tr>
+        <th>title</th>
+        <th>Genre</th>
+        <th>Stock</th>
+        <th>Rating</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for m in movies %}
+    <tr>
+        <td> <a href="{% url 'detail' id=m.id%}">{{m.title}}</a></td>
+        <td>{{m.genre}}</td>
+        <td>{{m.number_in_stock}}</td>
+        <td>{{m.rating}}</td>
+
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</div>
+{%endblock%}
